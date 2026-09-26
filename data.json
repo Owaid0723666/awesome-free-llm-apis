@@ -1151,7 +1151,7 @@
           "id": "deepseek-v4.1-flash",
           "name": "deepseek-v4.1-flash",
           "context": "1M",
-          "maxOutput": "256K",
+          "maxOutput": "384K",
           "modality": "Text (reasoning)",
           "rateLimit": "12 RPM, 60 req/5h"
         },
@@ -1167,7 +1167,7 @@
           "id": "Qwen/Qwen3.5-397B-A17B",
           "name": "Qwen/Qwen3.5-397B-A17B",
           "context": "256K",
-          "maxOutput": "32K",
+          "maxOutput": "64K",
           "modality": "Text (reasoning)",
           "rateLimit": "12 RPM, 60 req/5h"
         }
