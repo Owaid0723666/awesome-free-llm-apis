@@ -1144,7 +1144,7 @@
       "flag": "🌐",
       "url": "https://onomeo.com/dashboard",
       "baseUrl": "https://onomeo.com/v1",
-      "description": "API gateway with a small daily check-in free tier, no credit card required. 47 models behind one OpenAI-compatible endpoint. Check-in credits start at 50,000 on day 1 and rise to 200,000/day from day 7 of a streak, with strict rate limits. An optional $5 one-time purchase buys 1,000,000 credits. Public beta: not everything is guaranteed to work, feedback welcome.",
+      "description": "API gateway with a small daily check-in free tier, no credit card required. 47 models behind one OpenAI-compatible endpoint; the 35 free models use no credits. Check-in credits for the larger models start at 20,000 on day 1 and rise to 50,000/day from day 7 of a streak, with strict rate limits. An optional $5/month subscription brings 3,000,000 credits a month. Public beta: not everything is guaranteed to work, feedback welcome.",
       "footnoteRef": 14,
       "models": [
         {
@@ -1225,7 +1225,7 @@
     },
     {
       "id": 14,
-      "text": "Credits, not tokens: the cost of a reply varies by model, from about 40 credits to several thousand, and is listed on the [models page](https://onomeo.com/models). The daily check-in gives 50,000 on day 1, then 70K, 90K, 110K, 140K, 170K, and 200,000/day from the seventh consecutive day; missing a day resets the streak. Rate limits: 12 RPM per key, 60 requests per account and 120 per IP in any 5-hour window, plus a site-wide pool of 450 requests per 5 hours shared by accounts that have not bought credits. 13 larger models are capped at 50,000 credits/day per account that has not paid, and 300,000/day per account that bought credits. Most models are routed through other providers' free tiers, so availability changes and some upstreams may use prompts for training; each model page says which. `GET https://onomeo.com/api/info` needs no key and returns the live model list and limits. Public beta: not every feature is guaranteed to work, and feedback is welcome at https://onomeo.com/feedback."
+      "text": "Free models, including the three listed here, use no credits and are limited by calls: 12 RPM per key, 60 calls per account and 120 per IP in any 5-hour window (a long request counts as several calls), plus a site-wide pool of 450 calls per 5 hours shared by all accounts. Credits are spent only on the 12 larger models, at a per-model rate listed on the [models page](https://onomeo.com/models). The daily check-in gives 20,000 on day 1, then 25K, 30K, 35K, 40K, 45K, and 50,000/day from the seventh consecutive day; missing a day resets the streak. The 12 larger models are capped at 50,000 credits/day per account that has not paid, and 300,000/day per account that bought credits. The 35 free models are routed through other providers' free tiers, so availability changes; 31 of the 47 models' upstreams may use prompts for training, and each model page says which. `GET https://onomeo.com/api/info` needs no key and returns the live model list and limits. Public beta: not every feature is guaranteed to work, and feedback is welcome at https://onomeo.com/feedback."
     }
   ],
   "glossary": [
