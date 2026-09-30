@@ -1144,7 +1144,7 @@
       "flag": "🌐",
       "url": "https://onomeo.com/dashboard",
       "baseUrl": "https://onomeo.com/v1",
-      "description": "API gateway with a small daily check-in free tier, no credit card required. 47 models behind one OpenAI-compatible endpoint; the 35 free models use no credits. Check-in credits for the larger models start at 20,000 on day 1 and rise to 50,000/day from day 7 of a streak, with strict rate limits. An optional $5/month subscription brings 3,000,000 credits a month. Public beta: not everything is guaranteed to work, feedback welcome.",
+      "description": "35 free models behind one OpenAI-compatible endpoint, no credit card required. Free models use no credits and are limited by call count (20 calls per 5 hours per account that has not paid). 9 premium models and a DeepSeek coding line are for paid accounts only (optional, US$5 for 3,000,000 credits). Public beta: not every feature is guaranteed to work; we are actively collecting feedback and welcome it.",
       "footnoteRef": 14,
       "models": [
         {
@@ -1153,7 +1153,7 @@
           "context": "1M",
           "maxOutput": "384K",
           "modality": "Text (reasoning)",
-          "rateLimit": "12 RPM, 60 req/5h"
+          "rateLimit": "12 RPM, 20 req/5h"
         },
         {
           "id": "glm-5.2",
@@ -1161,7 +1161,7 @@
           "context": "1M",
           "maxOutput": "128K",
           "modality": "Text (reasoning)",
-          "rateLimit": "12 RPM, 60 req/5h"
+          "rateLimit": "12 RPM, 20 req/5h"
         },
         {
           "id": "Qwen/Qwen3.5-397B-A17B",
@@ -1169,7 +1169,7 @@
           "context": "256K",
           "maxOutput": "64K",
           "modality": "Text (reasoning)",
-          "rateLimit": "12 RPM, 60 req/5h"
+          "rateLimit": "12 RPM, 20 req/5h"
         }
       ]
     }
@@ -1225,7 +1225,7 @@
     },
     {
       "id": 14,
-      "text": "Free models, including the three listed here, use no credits and are limited by calls: 12 RPM per key, 60 calls per account and 120 per IP in any 5-hour window (a long request counts as several calls), plus a site-wide pool of 450 calls per 5 hours shared by all accounts. Credits are spent only on the 12 larger models, at a per-model rate listed on the [models page](https://onomeo.com/models). The daily check-in gives 20,000 on day 1, then 25K, 30K, 35K, 40K, 45K, and 50,000/day from the seventh consecutive day; missing a day resets the streak. The 12 larger models are capped at 50,000 credits/day per account that has not paid, and 300,000/day per account that bought credits. The 35 free models are routed through other providers' free tiers, so availability changes; 31 of the 47 models' upstreams may use prompts for training, and each model page says which. `GET https://onomeo.com/api/info` needs no key and returns the live model list and limits. Public beta: not every feature is guaranteed to work, and feedback is welcome at https://onomeo.com/feedback."
+      "text": "Free models, including the three listed here, use no credits and are limited by calls: 12 RPM per key, 20 calls per unpaid account (60 per paid account) and 40 per IP in any 5-hour window (a long request counts as several calls, one per 50,000 counted characters), plus a site-wide shared pool of free calls that can run out at busy times. The 9 premium models and the DeepSeek coding line are only for paid accounts: an optional US$5 payment on Ko-fi brings 3,000,000 credits, and a paid account can spend up to 300,000 credits/day on premium models, at a per-model rate listed on the [models page](https://onomeo.com/models). The daily check-in gives 5,000 credits on day 1, rising to 10,000/day from the seventh consecutive day; missing a day resets the streak. Credits can also be spent on image generation (100 to 200 credits per image). The 35 free models are routed through other providers' free tiers, so availability changes; many upstream providers may use prompts for training, and each model page says which. `GET https://onomeo.com/api/info` needs no key and returns the live model list and limits. Public beta: not every feature is guaranteed to work, and we are actively collecting feedback, which is welcome at https://onomeo.com/feedback."
     }
   ],
   "glossary": [
